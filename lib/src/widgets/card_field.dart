@@ -57,7 +57,6 @@ class WebStripeCardState extends State<WebCardField> with CardFieldContext {
   @override
   void initState() {
     _viewType='stripe_card_${DateTime.now().millisecondsSinceEpoch}';
-    print('ViewType is : $_viewType');
     ui.platformViewRegistry.registerViewFactory(
       _viewType,
       (int viewId) => web.HTMLDivElement()
@@ -126,7 +125,6 @@ class WebStripeCardState extends State<WebCardField> with CardFieldContext {
 
   @override
   Widget build(BuildContext context) {
-    print('ViewType in build is : $_viewType');
     final constraints = widget.constraints ??
         const BoxConstraints.expand(height: kCardFieldDefaultHeight);
 
